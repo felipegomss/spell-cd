@@ -1,0 +1,128 @@
+import type { RoleId, RoleSlot, Spell, SpellId } from "../types";
+
+export const SPELLS: Record<SpellId, Spell> = {
+  flash: {
+    id: "flash",
+    name: "Flash",
+    abbreviation: "F",
+    cooldown: 300,
+    iconSrc: "/240px-Flash_HD.png",
+  },
+  ignite: {
+    id: "ignite",
+    name: "Ignite",
+    abbreviation: "I",
+    cooldown: 180,
+    iconSrc: "/240px-Ignite_HD.png",
+  },
+  teleport: {
+    id: "teleport",
+    name: "Teleport",
+    abbreviation: "TP",
+    cooldown: 360,
+    iconSrc: "/240px-Teleport_HD.png",
+  },
+  exhaust: {
+    id: "exhaust",
+    name: "Exhaust",
+    abbreviation: "Ex",
+    cooldown: 210,
+    iconSrc: "/240px-Exhaust_HD.png",
+  },
+  heal: {
+    id: "heal",
+    name: "Heal",
+    abbreviation: "H",
+    cooldown: 240,
+    iconSrc: "/240px-Heal_HD.png",
+  },
+  ghost: {
+    id: "ghost",
+    name: "Ghost",
+    abbreviation: "G",
+    cooldown: 240,
+    iconSrc: "/240px-Ghost_HD.png",
+  },
+  barrier: {
+    id: "barrier",
+    name: "Barrier",
+    abbreviation: "B",
+    cooldown: 180,
+    iconSrc: "/240px-Barrier_HD.png",
+  },
+  cleanse: {
+    id: "cleanse",
+    name: "Cleanse",
+    abbreviation: "Cl",
+    cooldown: 210,
+    iconSrc: "/240px-Cleanse_HD.png",
+  },
+  smite: {
+    id: "smite",
+    name: "Smite",
+    abbreviation: "Sm",
+    cooldown: 90,
+    iconSrc: "/240px-Smite_HD.png",
+  },
+};
+
+export const INITIAL_SLOTS: RoleSlot[] = [
+  {
+    id: "top",
+    label: "Top",
+    spell1: { spellId: "flash", endTime: null },
+    spell2: { spellId: "teleport", endTime: null },
+    championId: null,
+    ultLastClickTime: null,
+    ultRankMode: "auto",
+    ultRankManual: 1,
+  },
+  {
+    id: "jungle",
+    label: "Jungle",
+    spell1: { spellId: "flash", endTime: null },
+    spell2: { spellId: "smite", endTime: null },
+    championId: null,
+    ultLastClickTime: null,
+    ultRankMode: "auto",
+    ultRankManual: 1,
+  },
+  {
+    id: "mid",
+    label: "Mid",
+    spell1: { spellId: "flash", endTime: null },
+    spell2: { spellId: "ignite", endTime: null },
+    championId: null,
+    ultLastClickTime: null,
+    ultRankMode: "auto",
+    ultRankManual: 1,
+  },
+  {
+    id: "adc",
+    label: "ADC",
+    spell1: { spellId: "flash", endTime: null },
+    spell2: { spellId: "heal", endTime: null },
+    championId: null,
+    ultLastClickTime: null,
+    ultRankMode: "auto",
+    ultRankManual: 1,
+  },
+  {
+    id: "support",
+    label: "Support",
+    spell1: { spellId: "flash", endTime: null },
+    spell2: { spellId: "exhaust", endTime: null },
+    championId: null,
+    ultLastClickTime: null,
+    ultRankMode: "auto",
+    ultRankManual: 1,
+  },
+];
+
+export const ROLE_ICONS: Record<RoleId, string> = {
+  top: "/Top_icon.png",
+  jungle: "/Jungle_icon.png",
+  mid: "/Middle_icon.png",
+  adc: "/Bottom_icon.png",
+  support: "/Support_icon.png",
+};
